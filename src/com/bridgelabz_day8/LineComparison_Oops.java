@@ -25,9 +25,22 @@ public class LineComparison_Oops {
             System.out.println("Both the lines are not equal");
         }
 
-
-
     }
+    void LineCompare(double len1,double len2) {
+
+        Double d1 = new Double(len1);
+        Double d2 = new Double(len2);
+
+        double compareValue = d1.compareTo(d2);
+        if (compareValue == 0)
+            System.out.println("len1 and len2 are equal");
+        else if (compareValue < 0)
+            System.out.println("len1 is less than len2");
+        else
+            System.out.println("len1 is greater than len2");
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -57,7 +70,9 @@ public class LineComparison_Oops {
         System.out.println("line 1 Co-ordinates");
         double l2=length(x3,y3,x4,y4);
         System.out.println("length of the line 2 is "+l2);
+
         LineComparison_Oops obj=new LineComparison_Oops();
         obj.lineEquality(l1,l2);
+        obj.LineCompare(l1,l2);
     }
 }
